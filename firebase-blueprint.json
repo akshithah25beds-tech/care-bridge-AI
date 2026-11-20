@@ -1,0 +1,180 @@
+{
+  "entities": {
+    "StaffProfile": {
+      "title": "StaffProfile",
+      "description": "Authenticated user profile with assigned healthcare role for RBAC.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "role": { "type": "string", "enum": ["clinician", "coordinator", "patient_kiosk"] },
+        "preferredLanguage": { "type": "string", "enum": ["en", "kn"] },
+        "department": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "displayName", "role", "createdAt", "updatedAt"]
+    },
+    "StaffPrivateInfo": {
+      "title": "StaffPrivateInfo",
+      "description": "Isolated PII (email, phone) for staff profiles.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "email": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "updatedAt"]
+    },
+    "PatientCase": {
+      "title": "PatientCase",
+      "description": "Central shared patient coordination case managed across all six agents.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "patientCode": { "type": "string", "minLength": 2, "maxLength": 40 },
+        "patientName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "age": { "type": "integer" },
+        "preferredLanguage": { "type": "string", "enum": ["en", "kn"] },
+        "screeningType": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "screeningValue": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "clinicianProtocol": { "type": "string", "minLength": 2, "maxLength": 200 },
+        "clinicianApprovedSummary": { "type": "string", "minLength": 2, "maxLength": 1000 },
+        "followUpCategory": { "type": "string", "enum": ["routine_review", "specialist_referral", "priority_clinician_review"] },
+        "stage": { "type": "string", "enum": ["intake_created", "voice_contacted", "acknowledged", "consultation_requested", "referral_active", "escalated", "closure_pending_approval", "closed"] },
+        "consentGranted": { "type": "boolean" },
+        "consentTimestamp": { "type": "string", "maxLength": 64 },
+        "resultAcknowledged": { "type": "boolean" },
+        "humanHandoffRequired": { "type": "boolean" },
+        "humanHandoffReason": { "type": "string", "maxLength": 500 },
+        "assignedClinician": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "dueAt": { "type": "string", "maxLength": 64 },
+        "closedByClinician": { "type": "string", "maxLength": 120 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "ownerId", "patientCode", "patientName", "preferredLanguage", "screeningType", "screeningValue", "clinicianProtocol", "followUpCategory", "stage", "consentGranted", "resultAcknowledged", "humanHandoffRequired", "createdAt", "updatedAt"]
+    },
+    "ConsultationRequest": {
+      "title": "ConsultationRequest",
+      "description": "Doctor appointment coordination record linked to a patient case.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "preferredDate": { "type": "string", "minLength": 2, "maxLength": 64 },
+        "preferredSlot": { "type": "string", "minLength": 2, "maxLength": 64 },
+        "mode": { "type": "string", "enum": ["in_person", "telehealth"] },
+        "languageSupport": { "type": "string", "enum": ["en", "kn", "bilingual"] },
+        "department": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "status": { "type": "string", "enum": ["requested", "confirmed", "completed", "cancelled"] },
+        "notes": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "ownerId", "preferredDate", "mode", "status", "createdAt", "updatedAt"]
+    },
+    "ReferralRecord": {
+      "title": "ReferralRecord",
+      "description": "Inter-facility referral tracking between clinics, specialists, and hospitals.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "fromClinic": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "toFacility": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "specialty": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "status": { "type": "string", "enum": ["pending", "accepted", "scheduled", "completed"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "ownerId", "fromClinic", "toFacility", "specialty", "status", "createdAt", "updatedAt"]
+    },
+    "EscalationAlert": {
+      "title": "EscalationAlert",
+      "description": "Missed communication or overdue follow-up alert requiring staff review.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "reason": { "type": "string", "minLength": 2, "maxLength": 300 },
+        "severity": { "type": "string", "enum": ["warning", "critical"] },
+        "status": { "type": "string", "enum": ["open", "acknowledged", "resolved"] },
+        "resolvedBy": { "type": "string", "maxLength": 120 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "ownerId", "reason", "severity", "status", "createdAt", "updatedAt"]
+    },
+    "AgentActivity": {
+      "title": "AgentActivity",
+      "description": "Execution trace of the six specialized agents routed through the central coordinator.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "agentName": { "type": "string", "enum": ["ResultIntakeAgent", "PatientVoiceAgent", "ConsultationAgent", "ReferralAgent", "EscalationAgent", "CaseClosureAgent", "CentralCoordinator"] },
+        "action": { "type": "string", "minLength": 2, "maxLength": 160 },
+        "summary": { "type": "string", "minLength": 2, "maxLength": 500 },
+        "language": { "type": "string", "enum": ["en", "kn", "system"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "ownerId", "agentName", "action", "summary", "createdAt"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Immutable compliance and governance audit log entry.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "caseId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "actor": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "actorRole": { "type": "string", "enum": ["clinician", "coordinator", "patient_kiosk", "system_agent"] },
+        "event": { "type": "string", "minLength": 2, "maxLength": 160 },
+        "details": { "type": "string", "minLength": 2, "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "caseId", "ownerId", "actor", "actorRole", "event", "details", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/StaffProfile" },
+      "description": "Public staff profile and role assignment (RBAC)."
+    },
+    "/users/{userId}/private/info": {
+      "schema": { "$ref": "#/entities/StaffPrivateInfo" },
+      "description": "Isolated PII (email) accessible only to the owner or admin."
+    },
+    "/patientCases/{caseId}": {
+      "schema": { "$ref": "#/entities/PatientCase" },
+      "description": "Shared patient cases accessed by all six CareBridge AI agents."
+    },
+    "/patientCases/{caseId}/consultations/{consultationId}": {
+      "schema": { "$ref": "#/entities/ConsultationRequest" },
+      "description": "Consultation appointment requests for the parent case."
+    },
+    "/patientCases/{caseId}/referrals/{referralId}": {
+      "schema": { "$ref": "#/entities/ReferralRecord" },
+      "description": "Inter-facility referral tracking records for the parent case."
+    },
+    "/patientCases/{caseId}/escalations/{escalationId}": {
+      "schema": { "$ref": "#/entities/EscalationAlert" },
+      "description": "Escalation alerts for missed communications or overdue follow-ups."
+    },
+    "/patientCases/{caseId}/agentActivities/{activityId}": {
+      "schema": { "$ref": "#/entities/AgentActivity" },
+      "description": "Multi-agent coordinator execution activity logs."
+    },
+    "/patientCases/{caseId}/auditLogs/{logId}": {
+      "schema": { "$ref": "#/entities/AuditLog" },
+      "description": "Immutable governance audit logs for clinical safety and compliance."
+    }
+  }
+}

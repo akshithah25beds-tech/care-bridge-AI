@@ -1,0 +1,388 @@
+{
+  "cases": [
+    {
+      "id": "case_mwp73v1m_ebd0t",
+      "ownerId": "demo_clinic_owner",
+      "patientCode": "CB-KA-5526",
+      "patientName": "devsa",
+      "age": 49,
+      "preferredLanguage": "kn",
+      "screeningType": "HbA1c Metabolic Screening",
+      "screeningValue": "7.4% (Clinician Flagged)",
+      "clinicianProtocol": "Protocol CB-MET-02: Metabolic Follow-up & Endocrinology Review",
+      "clinicianApprovedSummary": "ನಿಮ್ಮ ವೈದ್ಯರು ತಪಾಸಣಾ ವರದಿಯನ್ನು ಪರಿಶೀಲಿಸಲು ಮುಂದಿನ ಸಮಾಲೋಚನೆಯನ್ನು ಶಿಫಾರಸು ಮಾಡಿದ್ದಾರೆ. ಇದು ರೋಗನಿರ್ಣಯವಲ್ಲ; ತಜ್ಞ ವೈದ್ಯರು ನಿಮ್ಮ ವರದಿಯನ್ನು ನೋಡಿ ಮುಂದಿನ ಕ್ರಮಗಳ ಬಗ್ಗೆ ತಿಳಿಸುತ್ತಾರೆ.",
+      "followUpCategory": "specialist_referral",
+      "stage": "intake_created",
+      "consentGranted": false,
+      "resultAcknowledged": false,
+      "humanHandoffRequired": false,
+      "assignedClinician": "Dr. Ananya Rao, MD",
+      "dueAt": "2026-11-22T16:30:36.778Z",
+      "createdAt": "2026-11-20T16:30:36.777Z",
+      "updatedAt": "2026-11-20T16:30:36.777Z"
+    },
+    {
+      "id": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "patientCode": "CB-BLR-1041",
+      "patientName": "Ramesh Gowda",
+      "age": 54,
+      "preferredLanguage": "kn",
+      "screeningType": "HbA1c Metabolic Screening",
+      "screeningValue": "7.6% (Clinician Flagged)",
+      "clinicianProtocol": "Protocol CB-MET-02: Metabolic Follow-up & Endocrinology Review",
+      "clinicianApprovedSummary": "ನಿಮ್ಮ ವೈದ್ಯರು ತಪಾಸಣಾ ವರದಿಯನ್ನು ಪರಿಶೀಲಿಸಲು ಮುಂದಿನ ಸಮಾಲೋಚನೆಯನ್ನು ಶಿಫಾರಸು ಮಾಡಿದ್ದಾರೆ. ಇದು ರೋಗನಿರ್ಣಯವಲ್ಲ; ತಜ್ಞ ವೈದ್ಯರು ನಿಮ್ಮ ವರದಿಯನ್ನು ನೋಡಿ ಮುಂದಿನ ಕ್ರಮಗಳ ಬಗ್ಗೆ ತಿಳಿಸುತ್ತಾರೆ.",
+      "followUpCategory": "specialist_referral",
+      "stage": "referral_active",
+      "consentGranted": true,
+      "consentTimestamp": "2026-11-19T21:30:00.000Z",
+      "resultAcknowledged": true,
+      "humanHandoffRequired": false,
+      "assignedClinician": "Dr. Ananya Rao, MD",
+      "dueAt": "2026-11-21T15:30:00.000Z",
+      "createdAt": "2026-11-19T13:30:00.000Z",
+      "updatedAt": "2026-11-20T11:30:00.000Z"
+    },
+    {
+      "id": "case_cb_1042",
+      "ownerId": "demo_clinic_owner",
+      "patientCode": "CB-MYS-1042",
+      "patientName": "Lakshmi Devi",
+      "age": 47,
+      "preferredLanguage": "kn",
+      "screeningType": "Mammography Screening",
+      "screeningValue": "Clinician Review Requested (Code R-2)",
+      "clinicianProtocol": "Protocol CB-IMG-04: Diagnostic Imaging Specialist Follow-up",
+      "clinicianApprovedSummary": "ನಿಮ್ಮ ತಪಾಸಣಾ ಚಿತ್ರಗಳ ಕುರಿತು ತಜ್ಞ ವೈದ್ಯರೊಂದಿಗೆ ಮುಂದಿನ ಸಮಾಲೋಚನೆ ನಡೆಸಲು ವೈದ್ಯರು ಸೂಚಿಸಿದ್ದಾರೆ.",
+      "followUpCategory": "specialist_referral",
+      "stage": "acknowledged",
+      "consentGranted": true,
+      "resultAcknowledged": true,
+      "humanHandoffRequired": false,
+      "assignedClinician": "Dr. Meera Deshpande, MD",
+      "dueAt": "2026-11-21T09:30:00.000Z",
+      "createdAt": "2026-11-20T09:30:00.000Z",
+      "updatedAt": "2026-11-20T16:36:22.250Z",
+      "consentTimestamp": "2026-11-20T16:36:22.250Z"
+    },
+    {
+      "id": "case_cb_1043",
+      "ownerId": "demo_clinic_owner",
+      "patientCode": "CB-BLR-1043",
+      "patientName": "Kavitha Sharma",
+      "age": 61,
+      "preferredLanguage": "en",
+      "screeningType": "Blood Pressure Screening",
+      "screeningValue": "154/96 mmHg (Priority Follow-up)",
+      "clinicianProtocol": "Protocol CB-CV-03: Clinician-Flagged Blood Pressure Follow-up",
+      "clinicianApprovedSummary": "Your clinician has flagged your blood pressure screening entry for a timely follow-up visit with a care team physician. Only your doctor will advise on clinical care.",
+      "followUpCategory": "priority_clinician_review",
+      "stage": "escalated",
+      "consentGranted": true,
+      "consentTimestamp": "2026-11-19T09:30:00.000Z",
+      "resultAcknowledged": false,
+      "humanHandoffRequired": true,
+      "humanHandoffReason": "24h follow-up SLA exceeded without patient result acknowledgement.",
+      "assignedClinician": "Dr. Ananya Rao, MD",
+      "dueAt": "2026-11-20T09:30:00.000Z",
+      "createdAt": "2026-11-19T03:30:00.000Z",
+      "updatedAt": "2026-11-20T13:30:00.000Z"
+    },
+    {
+      "id": "case_cb_1044",
+      "ownerId": "demo_clinic_owner",
+      "patientCode": "CB-HSN-1044",
+      "patientName": "Arjun Nair",
+      "age": 39,
+      "preferredLanguage": "en",
+      "screeningType": "Lipid Panel Screening",
+      "screeningValue": "Routine Review Complete",
+      "clinicianProtocol": "Protocol CB-GEN-01: Standard Clinician-Approved Follow-up",
+      "clinicianApprovedSummary": "Your clinician has posted a screening follow-up notice for your confirmation and appointment coordination.",
+      "followUpCategory": "routine_review",
+      "stage": "closed",
+      "consentGranted": true,
+      "consentTimestamp": "2026-11-18T19:30:00.000Z",
+      "resultAcknowledged": true,
+      "humanHandoffRequired": false,
+      "assignedClinician": "Dr. Ananya Rao, MD",
+      "dueAt": "2026-11-20T03:30:00.000Z",
+      "closedByClinician": "Dr. Ananya Rao, MD",
+      "createdAt": "2026-11-18T15:30:00.000Z",
+      "updatedAt": "2026-11-20T07:30:00.000Z"
+    }
+  ],
+  "consultations": [
+    {
+      "id": "cons_1041_1",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "preferredDate": "2026-11-22",
+      "preferredSlot": "10:30 AM IST",
+      "mode": "in_person",
+      "languageSupport": "kn",
+      "department": "Endocrinology & Metabolic Clinic",
+      "status": "confirmed",
+      "notes": "Patient requested Kannada-speaking specialist coordinator.",
+      "createdAt": "2026-11-19T23:30:00.000Z",
+      "updatedAt": "2026-11-20T05:30:00.000Z"
+    },
+    {
+      "id": "cons_1044_1",
+      "caseId": "case_cb_1044",
+      "ownerId": "demo_clinic_owner",
+      "preferredDate": "2026-11-19",
+      "preferredSlot": "04:00 PM IST",
+      "mode": "telehealth",
+      "languageSupport": "en",
+      "department": "General Outpatient Medicine",
+      "status": "completed",
+      "notes": "Completed telehealth follow-up with Dr. Ananya Rao.",
+      "createdAt": "2026-11-18T23:30:00.000Z",
+      "updatedAt": "2026-11-20T05:30:00.000Z"
+    }
+  ],
+  "referrals": [
+    {
+      "id": "ref_1041_1",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "fromClinic": "Jayanagar Primary Screening Center",
+      "toFacility": "Victoria Specialty Care Wing, Bengaluru",
+      "specialty": "Endocrinology",
+      "status": "scheduled",
+      "createdAt": "2026-11-20T03:30:00.000Z",
+      "updatedAt": "2026-11-20T11:30:00.000Z"
+    }
+  ],
+  "escalations": [
+    {
+      "id": "esc_1043_1",
+      "caseId": "case_cb_1043",
+      "ownerId": "demo_clinic_owner",
+      "reason": "Overdue follow-up SLA exceeded without patient acknowledgement (Protocol CB-CV-03).",
+      "severity": "critical",
+      "status": "open",
+      "createdAt": "2026-11-20T13:30:00.000Z",
+      "updatedAt": "2026-11-20T13:30:00.000Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_mwp7b9m2_qifru",
+      "caseId": "case_cb_1042",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "PatientVoiceAgent",
+      "action": "Recorded patient consent & result acknowledgement",
+      "summary": "Consent=true, Acknowledged=true (Kannada).",
+      "language": "kn",
+      "createdAt": "2026-11-20T16:36:22.250Z"
+    },
+    {
+      "id": "act_mwp73v1m_34ksc",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "ResultIntakeAgent",
+      "action": "Created patient case from clinician-approved screening rules",
+      "summary": "Assigned Protocol CB-MET-02: Metabolic Follow-up & Endocrinology Review (specialist_referral) for devsa.",
+      "language": "system",
+      "createdAt": "2026-11-20T16:30:36.777Z"
+    },
+    {
+      "id": "act_1",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "ResultIntakeAgent",
+      "action": "Evaluated screening intake",
+      "summary": "Mapped HbA1c 7.6% to clinician-approved Protocol CB-MET-02.",
+      "language": "system",
+      "createdAt": "2026-11-19T13:30:00.000Z"
+    },
+    {
+      "id": "act_2",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "PatientVoiceAgent",
+      "action": "Kannada voice outreach & consent",
+      "summary": "Patient Ramesh Gowda granted consent and acknowledged clinician summary in Kannada.",
+      "language": "kn",
+      "createdAt": "2026-11-19T21:30:00.000Z"
+    },
+    {
+      "id": "act_3",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "ConsultationAgent",
+      "action": "Confirmed consultation slot",
+      "summary": "Booked in-person Endocrinology slot for 2026-11-22 10:30 AM IST.",
+      "language": "kn",
+      "createdAt": "2026-11-19T23:30:00.000Z"
+    },
+    {
+      "id": "act_4",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "ReferralAgent",
+      "action": "Scheduled specialist referral",
+      "summary": "Referral to Victoria Specialty Care Wing marked scheduled.",
+      "language": "system",
+      "createdAt": "2026-11-20T11:30:00.000Z"
+    },
+    {
+      "id": "act_5",
+      "caseId": "case_cb_1043",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "EscalationAgent",
+      "action": "Triggered SLA escalation alert",
+      "summary": "Detected overdue acknowledgement on CB-BLR-1043; flagged for clinician handoff.",
+      "language": "system",
+      "createdAt": "2026-11-20T13:30:00.000Z"
+    },
+    {
+      "id": "act_6",
+      "caseId": "case_cb_1044",
+      "ownerId": "demo_clinic_owner",
+      "agentName": "CaseClosureAgent",
+      "action": "Verified evidence & closed with clinician approval",
+      "summary": "Dr. Ananya Rao approved closure after completed telehealth consultation.",
+      "language": "en",
+      "createdAt": "2026-11-20T07:30:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_mwp7b9m2_l4dq9",
+      "caseId": "case_cb_1042",
+      "ownerId": "demo_clinic_owner",
+      "actor": "Dr. Ananya Rao, MD",
+      "actorRole": "clinician",
+      "event": "CONSENT_AND_ACKNOWLEDGEMENT_RECORDED",
+      "details": "Recorded consent=true and acknowledgement=true for CB-MYS-1042.",
+      "createdAt": "2026-11-20T16:36:22.250Z"
+    },
+    {
+      "id": "aud_mwp73v1m_ywaa1",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "ownerId": "demo_clinic_owner",
+      "actor": "Dr. Ananya Rao, MD",
+      "actorRole": "clinician",
+      "event": "RESULT_INTAKE_CREATED",
+      "details": "Case CB-KA-5526 initialized via ResultIntakeAgent using protocol Protocol CB-MET-02: Metabolic Follow-up & Endocrinology Review.",
+      "createdAt": "2026-11-20T16:30:36.777Z"
+    },
+    {
+      "id": "aud_1",
+      "caseId": "case_cb_1041",
+      "ownerId": "demo_clinic_owner",
+      "actor": "PatientVoiceAgent",
+      "actorRole": "system_agent",
+      "event": "CONSENT_AND_ACKNOWLEDGEMENT_RECORDED",
+      "details": "Verified Kannada voice consent and clinician-approved summary acknowledgement for CB-BLR-1041.",
+      "createdAt": "2026-11-19T21:30:00.000Z"
+    },
+    {
+      "id": "aud_2",
+      "caseId": "case_cb_1043",
+      "ownerId": "demo_clinic_owner",
+      "actor": "EscalationAgent",
+      "actorRole": "system_agent",
+      "event": "HUMAN_HANDOFF_ESCALATED",
+      "details": "SLA exceeded on Blood Pressure Screening; routed to Dr. Ananya Rao.",
+      "createdAt": "2026-11-20T13:30:00.000Z"
+    },
+    {
+      "id": "aud_3",
+      "caseId": "case_cb_1044",
+      "ownerId": "demo_clinic_owner",
+      "actor": "Dr. Ananya Rao, MD",
+      "actorRole": "clinician",
+      "event": "CASE_CLOSED_WITH_HUMAN_APPROVAL",
+      "details": "All evidence checks passed; clinician authorized final case closure.",
+      "createdAt": "2026-11-20T07:30:00.000Z"
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "trn_1",
+      "caseId": "case_cb_1041",
+      "speaker": "agent",
+      "language": "kn",
+      "text": "ನಮಸ್ಕಾರ ರಮೇಶ್ ಗೌಡ ಅವರೇ. ನಿಮ್ಮ ವೈದ್ಯರು ಅನುಮೋದಿಸಿರುವ HbA1c ತಪಾಸಣಾ ವರದಿಯ ಮುಂದಿನ ಸಮಾಲೋಚನೆಯ ಬಗ್ಗೆ ತಿಳಿಸಲು ಕರೆ ಮಾಡಿದ್ದೇನೆ. ಮುಂದುವರಿಯಲು ಒಪ್ಪಿಗೆ ನೀಡುತ್ತೀರಾ?",
+      "agentAction": "PatientVoiceAgent: Requested Consent (Kannada)",
+      "timestamp": "2026-11-19T21:30:00.000Z"
+    },
+    {
+      "id": "trn_2",
+      "caseId": "case_cb_1041",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "ಹೌದು, ನಾನು ಒಪ್ಪಿಗೆ ನೀಡುತ್ತೇನೆ. ನನಗೆ ನವೆಂಬರ್ 22 ರಂದು ಬೆಳಿಗ್ಗೆ ವೈದ್ಯರ ಭೇಟಿ ಬೇಕು.",
+      "timestamp": "2026-11-19T21:36:00.000Z"
+    },
+    {
+      "id": "trn_3",
+      "caseId": "case_cb_1041",
+      "speaker": "agent",
+      "language": "kn",
+      "text": "ಧನ್ಯವಾದಗಳು. ನಿಮ್ಮ ಒಪ್ಪಿಗೆ ಮತ್ತು ವರದಿಯ ದೃಢೀಕರಣವನ್ನು ದಾಖಲಿಸಲಾಗಿದೆ. ಸಮಾಲೋಚನಾ ಏಜೆಂಟ್ ಮೂಲಕ ನವೆಂಬರ್ 22, ಬೆಳಿಗ್ಗೆ 10:30 ಕ್ಕೆ ಎಂಡೋಕ್ರೈನಾಲಜಿ ಭೇಟಿಯನ್ನು ನಿಗದಿಪಡಿಸಲಾಗಿದೆ.",
+      "agentAction": "CentralCoordinator -> ConsultationAgent + ReferralAgent",
+      "timestamp": "2026-11-19T21:42:00.000Z"
+    },
+    {
+      "id": "trn_mwp769mv_km766",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "ನನಗೆ ನವೆಂಬರ್ 23 ರಂದು ಬೆಳಿಗ್ಗೆ 10:30 ಕ್ಕೆ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ವೈದ್ಯರ ಭೇಟಿ ಬೇಕು.",
+      "timestamp": "2026-11-20T16:32:28.998Z"
+    },
+    {
+      "id": "trn_mwp76j31_pkc59",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "i want to go",
+      "timestamp": "2026-11-20T16:32:41.245Z"
+    },
+    {
+      "id": "trn_mwp76l0k_eq4kk",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "i want to go",
+      "timestamp": "2026-11-20T16:32:43.748Z"
+    },
+    {
+      "id": "trn_mwp76lv6_dp6l8",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "i want to go",
+      "timestamp": "2026-11-20T16:32:44.850Z"
+    },
+    {
+      "id": "trn_mwp76m6o_bw54w",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "i want to go",
+      "timestamp": "2026-11-20T16:32:45.264Z"
+    },
+    {
+      "id": "trn_mwp76mi8_0mrt4",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "i want to go",
+      "timestamp": "2026-11-20T16:32:45.680Z"
+    },
+    {
+      "id": "trn_mwp76mtc_dgla5",
+      "caseId": "case_mwp73v1m_ebd0t",
+      "speaker": "patient",
+      "language": "kn",
+      "text": "i want to go",
+      "timestamp": "2026-11-20T16:32:46.080Z"
+    }
+  ]
+}
